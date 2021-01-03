@@ -5,14 +5,14 @@ import hello.core.discount.FixDiscountPolicy;
 import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemoryMemberRepository;
-import hello.core.member.Repository;
+import hello.core.member.MemberRepository;
 
 public class OrderServiceImpl implements OrderService{
 	
-	private final Repository repo;
+	private final MemberRepository repo;
 	private final DiscountPolicy discountPolicy ;
 	
-	public OrderServiceImpl(Repository repo, DiscountPolicy discountPolicy) {
+	public OrderServiceImpl(MemberRepository repo, DiscountPolicy discountPolicy) {
 		this.repo = repo;
 		this.discountPolicy = discountPolicy;
 	}

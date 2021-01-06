@@ -18,14 +18,17 @@ public class AppConfig {
 
 	@Bean
 	public MemberService memberService() {
+		System.out.println("call appC.memberService");
 		return new MemberServiceImpl(repository());
 	}
 	@Bean
 	public MemberRepository repository() {
+		System.out.println("call appC.repository");
 		return new MemoryMemberRepository();
 	}
 	@Bean
 	public OrderService orderService() {
+		System.out.println("call appC.orderService");
 		return new OrderServiceImpl(repository(), new RateDiscountPolicy());
 	}
 	@Bean
